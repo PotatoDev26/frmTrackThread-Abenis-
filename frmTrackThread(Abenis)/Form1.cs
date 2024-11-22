@@ -17,14 +17,14 @@ namespace frmTrackThread_Abenis_
         public Form1()
         {
             InitializeComponent();
-            label1.Text = "-THREAD STARTS-";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string threadstart = "-Thread Starts-";
-            string threadend = "-End of Thread-";
+            string threadstart = "-THREAD START-";
+            string threadend = "-END OF THREAD-";
             Console.WriteLine(threadstart);
+            label1.Text = threadstart;
             ThreadStart firstMainThread = new ThreadStart(MyThreadClass.Thread1);
             Console.WriteLine("Thread Sequence 1:");
             threadA = new Thread(firstMainThread);
