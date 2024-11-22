@@ -22,7 +22,9 @@ namespace frmTrackThread_Abenis_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("-Thread Starts-");
+            string threadstart = "-Thread Starts-";
+            string threadend = "-End of Thread-";
+            Console.WriteLine(threadstart);
             ThreadStart firstMainThread = new ThreadStart(MyThreadClass.Thread1);
             Console.WriteLine("Thread Sequence 1:");
             threadA = new Thread(firstMainThread);
@@ -78,6 +80,9 @@ namespace frmTrackThread_Abenis_
             threadB.Join();
             threadC.Join();
             threadD.Join();
+
+            label1.Text = threadend;
+            Console.WriteLine(threadend);
         }
     }
 }
